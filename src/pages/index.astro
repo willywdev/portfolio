@@ -1,6 +1,7 @@
 ---
 import Background from "../components/Background";
 import Header from "../components/Header";
+import Button from "../components/Button.astro";
 ---
 
 <html lang='en' class='dark bg-black antialiased'>
@@ -15,6 +16,7 @@ import Header from "../components/Header";
     <Background client:load>
       <header>
         <Header client:load>Wilhelm Werwein</Header>
+        <Button>Hello World!</Button>
       </header>
     </Background>
   </body>
