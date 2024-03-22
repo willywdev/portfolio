@@ -5,11 +5,9 @@ import icon from "astro-icon";
 import react from "@astrojs/react";
 import vercel from "@astrojs/vercel/serverless";
 
-import biome from "astro-biome";
-
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), astroImageTools, icon(), react(), biome()],
+  integrations: [tailwind(), astroImageTools, icon(), react()],
   output: "server",
-  adapter: vercel()
+  adapter: vercel(),
 });
