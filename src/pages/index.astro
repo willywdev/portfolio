@@ -1,5 +1,6 @@
 ---
 import Background from "../components/Background";
+import Header from "../components/Header";
 ---
 
 <html lang='en' class='dark bg-black antialiased'>
@@ -12,7 +13,9 @@ import Background from "../components/Background";
   </head>
   <body>
     <Background client:load>
-      <h1>Wilhelm Werwein</h1>
+      <header>
+        <Header client:load>Wilhelm Werwein</Header>
+      </header>
     </Background>
   </body>
 </html>
