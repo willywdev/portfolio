@@ -1,0 +1,41 @@
+---
+import Background from "@components/Background";
+import Button from "@components/Button.astro";
+import "@css/font.css";
+
+const { title } = Astro.props;
+---
+
+<html lang='en' class='dark bg-black text-neutral-50 antialiased'>
+    <head>
+        <meta charset='utf-8' />
+        <link
+            rel='apple-touch-icon'
+            sizes='180x180'
+            href='/assets/favicon/apple-touch-icon.png'
+        />
+        <link
+            rel='icon'
+            type='image/png'
+            sizes='32x32'
+            href='/assets/favicon/favicon-32x32.png'
+        />
+        <link
+            rel='icon'
+            type='image/png'
+            sizes='16x16'
+            href='/assets/favicon/favicon-16x16.png'
+        />
+        <link rel='manifest' href='/assets/public/site.webmanifest' />
+        <meta name='viewport' content='width=device-width' />
+        <meta name='generator' content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body class='font-sans'>
+        <Background client:load />
+        <header>
+            <h1>Wilhelm Werwein</h1>
+            <Button>Hello World!</Button>
+        </header>
+    </body>
+</html>

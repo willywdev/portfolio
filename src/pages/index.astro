@@ -1,23 +1,5 @@
 ---
-import Background from "@components/Background";
-import Button from "@components/Button.astro";
-import "../css/font.css";
+import Portfolio from "@/layouts/Portfolio.astro";
 ---
 
-<html lang='en' class='dark bg-black antialiased'>
-  <head>
-    <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
-    <title>Wilhelm Werwein</title>
-  </head>
-  <body class='font-sans'>
-    <Background client:load>
-      <header>
-        <h1>Wilhelm Werwein</h1>
-        <Button>Hello World!</Button>
-      </header>
-    </Background>
-  </body>
-</html>
+<Portfolio title='Wilhelm Werwein' />
