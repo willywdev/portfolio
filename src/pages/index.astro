@@ -1,7 +1,6 @@
 ---
-import Background from "../components/Background";
-import Header from "../components/Header";
-import Button from "../components/Button.astro";
+import Background from "@components/Background";
+import Button from "@components/Button.astro";
 import "../css/font.css";
 ---
 
@@ -13,10 +12,10 @@ import "../css/font.css";
     <meta name='generator' content={Astro.generator} />
     <title>Wilhelm Werwein</title>
   </head>
-  <body>
+  <body class='font-sans'>
     <Background client:load>
       <header>
-        <Header client:load>Wilhelm Werwein</Header>
+        <h1>Wilhelm Werwein</h1>
         <Button>Hello World!</Button>
       </header>
     </Background>
