@@ -13,6 +13,6 @@ export default defineConfig({
     mode: "react",
     server: true
   }), tailwind(), astroImageTools, icon(), react()],
-  output: "server",
+  output: "hybrid",
   adapter: cloudflare()
 });
