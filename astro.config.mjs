@@ -3,13 +3,9 @@ import { astroImageTools } from "astro-imagetools";
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import react from "@astrojs/react";
-import vercel from "@astrojs/vercel/serverless";
+import million from "million/compiler";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), astroImageTools, icon(), react()],
-  output: "hybrid",
-  adapter: vercel({
-    webAnalytics: { enabled: true },
-  }),
+  integrations: [million.vite({mode:"react", server: true}), tailwind(), astroImageTools, icon(), react()],
 });
