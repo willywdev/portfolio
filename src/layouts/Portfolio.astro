@@ -1,6 +1,6 @@
 ---
 import Background from "@components/Background";
-import Button from "@components/Button.astro";
+import Header from "@components/Header.astro";
 import "@css/font.css";
 
 const { title } = Astro.props;
@@ -33,9 +33,6 @@ const { title } = Astro.props;
     </head>
     <body class='font-sans'>
         <Background client:load />
-        <header>
-            <h1>Wilhelm Werwein</h1>
-            <Button>Hello World!</Button>
-        </header>
+        <Header />
     </body>
 </html>
