@@ -11,6 +11,6 @@ export default defineConfig({
     mode: "react",
     server: true
   }), tailwind(), icon(), react()],
-  output: "hybrid",
+  output: "server",
   adapter: vercel()
 });
