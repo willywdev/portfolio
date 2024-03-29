@@ -1,11 +1,19 @@
 ---
-import Button from "./Button.astro";
+import logo from "../assets/logo/logo.svg";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import { Button } from "./ui/moving-border";
 ---
 
-<header class='h-20 flex items-center justify-center gap-4 px-4 pt-8'>
-    <img src='./assets/logo/logo.svg' alt='logo' class='w-16 h-auto' />
-    <nav class='flex gap-4'>
-        <Button href='/downloads'>Downloads</Button>
-        <Button>About me</Button>
+<header class='h-20 flex items-center justify-between gap-4 px-4 pt-8'>
+    <Image src={logo} alt='logo' class='w-16 h-auto' />
+    <nav class='flex gap-4 items-center'>
+        <a href='/downloads'>Downloads</a>
+        <Button
+            borderRadius='1.75rem'
+            className=' border-neutral-200 dark:border-slate-800'
+            client:load>
+            <Icon name='mdi:github' size={24} />
+        </Button>
     </nav>
 </header>
