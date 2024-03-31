@@ -1,5 +1,5 @@
 ---
-const { href, target, class: additionalClasses, tooltip } = Astro.props;
+const { href, title, target, class: additionalClasses, tooltip } = Astro.props;
 const attributes = tooltip
     ? {
           "data-tooltip-target": "tooltip-bottom",
@@ -9,10 +9,11 @@ const attributes = tooltip
 ---
 
 <a
-    class={`hover:text-emerald-300 hover:animate-jump hover:animate-ease-in-out active:text-emerald-300 active:animate-jump active:animate-ease-in-out transition-colors ${additionalClasses}`}
+    class={`hover:text-emerald-300 hover:animate-jump hover:animate-ease-in-out active:text-emerald-300 active:animate-jump active:animate-ease-in-out transition-all ${additionalClasses}`}
     href={href}
     target={target}
     id='link'
+    aria-label={title}
     {...attributes}>
     <slot />
 </a>
