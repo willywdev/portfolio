@@ -13,10 +13,11 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Roboto Flex", ...defaultTheme.fontFamily.sans]
-      }
+      },
     },
   },
   plugins: [
+    require("tailwindcss-animated"),
     addVariablesForColors,
     ({ matchUtilities, theme }) => {
       matchUtilities(
