@@ -1,5 +1,4 @@
 ---
-import { TracingBeam } from "@/components/ui/tracing-beam";
 import Background from "@components/Background";
 import Header from "@components/Header.astro";
 import "@css/font.css";
@@ -31,22 +30,18 @@ const { title } = Astro.props;
         <meta name='generator' content={Astro.generator} />
         <title>{title}</title>
     </head>
-    <TracingBeam client:load>
-        <body class='font-sans scroll-smooth font-medium'>
-            <Background client:load />
-            <div class='h-[calc(100vh-1.5rem)]'>
-                <Header />
-                <main
-                    class='mt-20 flex justify-center items-center overflow-hidden'>
-                    <slot />
-                </main>
-            </div>
-            <div
-                class='bg-zinc-900 border-t border-r border-b border-zinc-800 w-[calc(100vw-20px)] h-screen rounded-r-3xl'>
-            </div>
-            <script src='./flowbite_loader.js'></script>
-        </body>
-    </TracingBeam>
-
-
+    <body class='font-sans scroll-smooth font-medium'>
+        <Background client:load />
+        <div class='h-[calc(100vh-1.5rem)]'>
+            <Header />
+            <main
+                class='mt-20 flex justify-center items-center overflow-hidden'>
+                <slot />
+            </main>
+        </div>
+        <div
+            class='bg-zinc-900 border-t border-r border-b border-zinc-800 w-[calc(100vw-20px)] h-screen rounded-r-3xl'>
+        </div>
+        <script src='./flowbite_loader.js'></script>
+    </body>
 </html>
