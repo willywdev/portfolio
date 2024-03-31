@@ -2,7 +2,6 @@
 import Background from "@components/Background";
 import Header from "@components/Header.astro";
 import "@css/font.css";
-
 const { title } = Astro.props;
 ---
 
@@ -34,5 +33,6 @@ const { title } = Astro.props;
     <body class='font-sans scroll-smooth font-medium'>
         <Background client:load />
         <Header />
+        <script src='./flowbite_loader.js'></script>
     </body>
 </html>

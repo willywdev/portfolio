@@ -3,7 +3,7 @@ const { href, target, class: additionalClasses } = Astro.props;
 ---
 
 <a
-    class={`hover:text-emerald-300 hover:animate-jump hover:animate-ease-in-out transition-colors ${additionalClasses}`}
+    class={`hover:text-emerald-300 hover:animate-jump hover:animate-ease-in-out active:text-emerald-300 active:animate-jump active:animate-ease-in-out transition-colors ${additionalClasses}`}
     href={href}
     target={target}>
     <slot />

@@ -15,8 +15,26 @@ import Link from "./Link.astro";
     </Link>
     <nav class='flex gap-4 items-center'>
         <Link href='/downloads'>Downloads</Link>
-        <Link href='https://github.com/willywdev' target='_blank'>
-            <Icon name='mdi:github' size={28} />
+        <Link
+            href='https://github.com/willywdev'
+            target='_blank'
+            class='rounded-full bg-neutral-200 p-0.5 hover:bg-emerald-300'>
+            <Icon name='mdi:github' size={26} color='#000' />
         </Link>
     </nav>
+    <button
+        data-tooltip-target='tooltip-bottom'
+        data-tooltip-placement='bottom'
+        type='button'
+        class='ms-3 mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+        >Tooltip bottom</button
+    >
+
+    <div
+        id='tooltip-bottom'
+        role='tooltip'
+        class='absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700'>
+        Tooltip on bottom
+        <div class='tooltip-arrow' data-popper-arrow></div>
+    </div>
 </header>
