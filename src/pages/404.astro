@@ -2,4 +2,37 @@
 import Portfolio from "@/layouts/Portfolio.astro";
 ---
 
-<Portfolio title='WW - 404' />
+<Portfolio title='WW - 404 Not Found'>
+    <style>
+        #canvas {
+            display: flex;
+            width: 100dvw;
+            max-width: 800px;
+            height: auto;
+            background: transparent;
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <canvas id='canvas'></canvas>
+</Portfolio>
+
+<script>
+    import { Rive, Layout, Fit } from "@rive-app/canvas";
+
+    const canvas = document.getElementById("canvas");
+    const filePath = "./rive/no_results_found.riv";
+
+    const r = new Rive({
+        src: filePath,
+        canvas: canvas,
+        autoplay: true,
+        onLoad: () => {
+            r.layout = new Layout({
+                fit: Fit.Cover,
+            });
+            r.resizeDrawingSurfaceToCanvas();
+        },
+    });
+</script>
