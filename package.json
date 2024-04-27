@@ -36,6 +36,7 @@
     "typescript-esbuild": "^0.4.5"
   },
   "devDependencies": {
+    "@iconify-json/emojione": "^1.1.10",
     "@iconify-json/mdi": "^1.1.64"
   }
 }

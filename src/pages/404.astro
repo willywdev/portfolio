@@ -1,13 +1,24 @@
 ---
 import Portfolio from "@/layouts/Portfolio.astro";
+import { Icon } from "astro-icon/components";
+import Button from "@/components/Button.astro";
 ---
 
 <Portfolio title='WW - 404 Not Found'>
-    <main class='flex flex-col items-center justify-center gap-4'>
+    <main class='flex flex-col items-center gap-4 mb-8'>
         <h1 class='text-2xl text-center md:text-4xl'>
-            Something went wrong :(
+            Whoops! Even Our Cat Can't Find That Page!
         </h1>
         <canvas id='canvas' class='flex w-screen h-auto marker:'></canvas>
+        <p class='px-3 text-center'>
+            <b> Meowch!</b>
+            <Icon name='emojione:weary-cat-face' size={20} class='inline' /> It looks
+            like you've stumbled into the same mysterious portal where my cat got
+            stuck.
+            <br /> This isn&#x27;t the page you were looking for, but don&#x27;t
+            worry, you haven't used up one of your nine lives yet!
+        </p>
+        <Button href='/'>Go Back Home</Button>
     </main>
 </Portfolio>
 
