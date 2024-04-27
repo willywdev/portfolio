@@ -1,0 +1,21 @@
+<canvas id='canvas'></canvas>
+
+<script>
+    import { Rive, Layout, Fit } from "@rive-app/canvas";
+
+    const canvas = document.getElementById("canvas");
+    const filePath = "./rive/sneaky_racoon.riv";
+
+    const r = new Rive({
+        src: filePath,
+        canvas: canvas,
+        autoplay: true,
+        stateMachines: "State Machine 1",
+        onLoad: () => {
+            r.layout = new Layout({
+                fit: Fit.Contain,
+            });
+            r.resizeDrawingSurfaceToCanvas();
+        },
+    });
+</script>
