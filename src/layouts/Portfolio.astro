@@ -25,23 +25,22 @@ const { title, headline } = Astro.props;
             sizes='16x16'
             href='/assets/favicon/favicon-16x16.png'
         />
-        <link rel='manifest' href='/assets/public/site.webmanifest' />
+        <link rel='manifest' href='/assets/favicon/site.webmanifest' />
         <meta name='viewport' content='width=device-width' />
         <meta name='generator' content={Astro.generator} />
         <title>{title}</title>
     </head>
     <body class='font-sans scroll-smooth font-medium'>
         <Background client:load />
-        <div class='h-screen max-h-screen overflow-clip relative'>
+        <div class='h-dvh max-h-dvh overflow-clip relative'>
             <Header />
             <main
                 class='mt-12 flex justify-center items-center overflow-hidden'>
                 <slot />
             </main>
         </div>
-        <!-- Second Section should start here and be also maximum h-screen and shouldnt be over this -->
-        <div class='h-screen max-h-screen overflow-clip bg-slate-600 relative'>
-        </div>
+        <!-- Second Section should start here and be also maximum h-dvh and shouldnt be over this -->
+        <div class='h-dvh max-h-dvh overflow-clip bg-slate-600 relative'></div>
         <script src='./flowbite_loader.js'></script>
     </body>
 </html>
