@@ -3,9 +3,10 @@ import Background from "@components/Background";
 import Header from "@components/Header.astro";
 import "@css/font.css";
 const { title } = Astro.props;
+import i18next from "i18next";
 ---
 
-<html lang='en' class='dark bg-black text-neutral-50 antialiased'>
+<html lang={i18next.language} class='dark bg-black text-neutral-50 antialiased'>
     <head>
         <meta charset='utf-8' />
         <link
@@ -48,16 +49,15 @@ const { title } = Astro.props;
             </div>
         </section>
         <script src='./flowbite_loader.js'></script>
+        <style>
+            body {
+                overflow-y: scroll;
+                scroll-snap-type: y proximity;
+            }
+
+            section {
+                scroll-snap-align: start;
+            }
+        </style>
     </body>
 </html>
-
-<style>
-    body {
-        overflow-y: scroll;
-        scroll-snap-type: y proximity;
-    }
-
-    section {
-        scroll-snap-align: start;
-    }
-</style>
