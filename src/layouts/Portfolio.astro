@@ -28,11 +28,12 @@ const { title } = Astro.props;
         <link rel='manifest' href='/assets/favicon/site.webmanifest' />
         <meta name='viewport' content='width=device-width' />
         <meta name='generator' content={Astro.generator} />
+        <link rel='sitemap' href='/sitemap-index.xml' />
         <title>{title}</title>
     </head>
     <body class='font-sans scroll-smooth font-medium'>
         <Background />
-        <section class='h-dvh max-h-dvh overflow-clip relative'>
+        <section class='h-dvh max-h-dvh overflow-clip relative md:px-64'>
             <Header />
             <main
                 class='mt-12 flex justify-center items-center overflow-hidden'>
@@ -40,7 +41,7 @@ const { title } = Astro.props;
             </main>
         </section>
         <section
-            class='h-dvh max-h-dvh overflow-clip bg-slate-700 relative shadow-inner snap-start'
+            class='h-dvh max-h-dvh overflow-clip bg-slate-700 relative shadow-inner'
             id='second-section'>
             <div
                 class="absolute inset-0 bg-[url('/assets/noise.webp')] scale-[1.2] bg-cover bg-multiply bg-center"
@@ -48,15 +49,5 @@ const { title } = Astro.props;
             </div>
         </section>
         <script src='./flowbite_loader.js'></script>
-        <style>
-            body {
-                overflow-y: scroll;
-                scroll-snap-type: y proximity;
-            }
-
-            section {
-                scroll-snap-align: start;
-            }
-        </style>
     </body>
 </html>
