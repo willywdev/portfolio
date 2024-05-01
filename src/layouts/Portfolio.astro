@@ -2,7 +2,7 @@
 import Background from "@components/Background";
 import Header from "@components/Header.astro";
 import "@css/font.css";
-const { title } = Astro.props;
+const { title, headline } = Astro.props;
 ---
 
 <html lang='en' class='dark bg-black text-neutral-50 antialiased'>
@@ -32,7 +32,7 @@ const { title } = Astro.props;
     </head>
     <body class='font-sans scroll-smooth font-medium'>
         <Background client:load />
-        <div class='h-screen max-h-screen overflow-clip'>
+        <div class='h-screen max-h-screen overflow-clip relative'>
             <Header />
             <main
                 class='mt-12 flex justify-center items-center overflow-hidden'>
@@ -40,7 +40,8 @@ const { title } = Astro.props;
             </main>
         </div>
         <!-- Second Section should start here and be also maximum h-screen and shouldnt be over this -->
-        <div class='h-screen max-h-screen overflow-clip bg-slate-600'></div>
+        <div class='h-screen max-h-screen overflow-clip bg-slate-600 relative'>
+        </div>
         <script src='./flowbite_loader.js'></script>
     </body>
 </html>

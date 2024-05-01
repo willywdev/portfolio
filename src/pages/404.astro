@@ -9,7 +9,7 @@ import Button from "@/components/Button.astro";
         <h1 class='text-2xl text-center md:text-4xl'>
             Whoops! Even My Cat Can't Find That Page!
         </h1>
-        <canvas id='canvas' class='flex w-screen h-auto marker:'></canvas>
+        <canvas id='canvas' class='flex h-auto'></canvas>
         <p class='px-3 text-center'>
             <b> Meowch!</b>
             <Icon name='emojione:weary-cat-face' size={20} class='inline' /> It looks
@@ -22,17 +22,8 @@ import Button from "@/components/Button.astro";
     </main>
 </Portfolio>
 
-<style>
-    #canvas {
-        display: flex;
-        width: 100dvw;
-        max-width: 800px;
-        height: auto;
-    }
-</style>
-
 <script>
-    import { Rive, Layout, Fit } from "@rive-app/canvas";
+    import { Rive, Layout, Fit } from "@rive-app/canvas-lite";
 
     const canvas = document.getElementById("canvas");
     const filePath = "./rive/not_found.riv";
@@ -44,7 +35,7 @@ import Button from "@/components/Button.astro";
         stateMachines: "State Machine 1",
         onLoad: () => {
             r.layout = new Layout({
-                fit: Fit.Contain,
+                fit: Fit.FitHeight,
             });
             r.resizeDrawingSurfaceToCanvas();
         },
