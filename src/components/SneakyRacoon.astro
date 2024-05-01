@@ -4,11 +4,12 @@
     import { Rive, Layout, Fit } from "@rive-app/canvas-lite";
 
     const canvas = document.getElementById("canvas");
-    const filePath = "./rive/sneaky_racoon.riv";
+    const filePath = "./rive/sneaky_raccoon.riv";
 
     const r = new Rive({
         src: filePath,
         canvas: canvas,
+        artboard: "Main",
         autoplay: true,
         stateMachines: "State Machine 1",
         onLoad: () => {
@@ -17,5 +18,6 @@
             });
             r.resizeDrawingSurfaceToCanvas();
         },
+        shouldDisableRiveListeners: true,
     });
 </script>

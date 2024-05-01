@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Roboto Flex";
     src: url("./font/RobotoFlex.ttf");
+    font-size: 100%;
 }
 
 body {

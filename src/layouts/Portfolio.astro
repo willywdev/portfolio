@@ -2,7 +2,7 @@
 import Background from "@components/Background";
 import Header from "@components/Header.astro";
 import "@css/font.css";
-const { title, headline } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <html lang='en' class='dark bg-black text-neutral-50 antialiased'>
@@ -32,15 +32,31 @@ const { title, headline } = Astro.props;
     </head>
     <body class='font-sans scroll-smooth font-medium'>
         <Background client:load />
-        <div class='h-dvh max-h-dvh overflow-clip relative'>
+        <section class='h-dvh max-h-dvh overflow-clip relative'>
             <Header />
             <main
                 class='mt-12 flex justify-center items-center overflow-hidden'>
                 <slot />
             </main>
-        </div>
-        <!-- Second Section should start here and be also maximum h-dvh and shouldnt be over this -->
-        <div class='h-dvh max-h-dvh overflow-clip bg-slate-600 relative'></div>
+        </section>
+        <section
+            class='h-dvh max-h-dvh overflow-clip bg-slate-700 relative shadow-inner snap-start'>
+            <div
+                class="absolute inset-0 bg-[url('/assets/noise.webp')] scale-[1.2] bg-cover bg-multiply bg-center"
+                style='opacity: 0.05; background-size: 30%;'>
+            </div>
+        </section>
         <script src='./flowbite_loader.js'></script>
     </body>
 </html>
+
+<style>
+    body {
+        overflow-y: scroll;
+        scroll-snap-type: y proximity;
+    }
+
+    section {
+        scroll-snap-align: start;
+    }
+</style>

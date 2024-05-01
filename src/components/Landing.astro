@@ -2,12 +2,15 @@
 import Headline from "./Headline.astro";
 import Card from "./Card.astro";
 import SneakyRacoon from "./SneakyRacoon.astro";
+import DownArrow from "./DownArrow.astro";
 ---
 
 <section class='w-full flex items-center flex-col px-4'>
     <Headline />
     <Card
-        >Welcome to my portfolio! I'm Willy, a 28-year-old software developer
+        >Welcome to my portfolio! I'm Willy, a 28-year-old <b
+            class='text-emerald-200'>software developer</b
+        >
         from Germany with a strong focus on JavaScript and Rust. <br />
         My passion for open source drives my approach to building innovative and
         scalable software. <br />
@@ -15,4 +18,5 @@ import SneakyRacoon from "./SneakyRacoon.astro";
         solve complex problems and deliver robust software solutions.
     </Card>
     <SneakyRacoon />
+    <DownArrow />
 </section>

@@ -13,6 +13,7 @@
     "@astrojs/react": "^3.1.0",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vercel": "^7.5.0",
+    "@playform/compress": "^0.0.3",
     "@rive-app/canvas-lite": "^2.15.2",
     "@tabler/icons-react": "^3.1.0",
     "@tsparticles/engine": "^3.3.0",
@@ -21,6 +22,7 @@
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
     "astro": "^4.5.9",
+    "astro-i18next": "^1.0.0-beta.21",
     "astro-icon": "^1.1.0",
     "clsx": "^2.1.0",
     "flowbite": "^2.3.0",
@@ -37,6 +39,7 @@
   },
   "devDependencies": {
     "@iconify-json/emojione": "^1.1.10",
-    "@iconify-json/mdi": "^1.1.64"
+    "@iconify-json/mdi": "^1.1.64",
+    "@iconify-json/mingcute": "^1.1.17"
   }
 }

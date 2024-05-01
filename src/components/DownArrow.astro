@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div
+    class='absolute bottom-4 right-5 bg-gradient-to-b from-gray-700 to-gray-800 rounded-xl border border-gray-600 w-10 h-10 flex justify-center'>
+    <Icon
+        name='mingcute:down-fill'
+        size={32}
+        class='animate absolute bottom-0 opacity-90'
+        color='#34d399'
+    />
+</div>
+
+<style>
+    .animate {
+        animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+        0%,
+        100% {
+            transform: translateY(-10%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+            transform: translateY(0%);
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+    }
+</style>
