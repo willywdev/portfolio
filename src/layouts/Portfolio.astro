@@ -1,53 +1,27 @@
 ---
 import Background from "@/components/Background.astro";
 import Header from "@components/Header.astro";
-import "@css/font.css";
+import Head from "./Head.astro";
+
 const { title } = Astro.props;
 ---
 
-<html lang='en' class='dark bg-black text-neutral-50 antialiased'>
-    <head>
-        <meta charset='utf-8' />
-        <link
-            rel='apple-touch-icon'
-            sizes='180x180'
-            href='/assets/favicon/apple-touch-icon.png'
-        />
-        <link
-            rel='icon'
-            type='image/png'
-            sizes='32x32'
-            href='/assets/favicon/favicon-32x32.png'
-        />
-        <link
-            rel='icon'
-            type='image/png'
-            sizes='16x16'
-            href='/assets/favicon/favicon-16x16.png'
-        />
-        <link rel='manifest' href='/assets/favicon/site.webmanifest' />
-        <meta name='viewport' content='width=device-width' />
-        <meta name='generator' content={Astro.generator} />
-        <link rel='sitemap' href='/sitemap-index.xml' />
-        <title>{title}</title>
-    </head>
-    <body class='font-sans scroll-smooth font-medium'>
-        <Background />
-        <section class='h-dvh max-h-dvh overflow-clip relative md:px-64'>
-            <Header />
-            <main
-                class='mt-12 flex justify-center items-center overflow-hidden'>
-                <slot />
-            </main>
-        </section>
-        <section
-            class='h-dvh max-h-dvh overflow-clip bg-slate-700 relative shadow-inner'
-            id='second-section'>
-            <div
-                class="absolute inset-0 bg-[url('/assets/noise.webp')] scale-[1.2] bg-cover bg-multiply bg-center"
-                style='opacity: 0.05; background-size: 30%;'>
-            </div>
-        </section>
-        <script src='./flowbite_loader.js'></script>
-    </body>
-</html>
+<Head title={title}>
+    <body class='font-sans scroll-smooth font-medium'></body>
+
+    <Background />
+    <section class='h-dvh max-h-dvh overflow-clip relative md:px-64'>
+        <Header />
+        <main class='mt-12 flex justify-center items-center overflow-hidden'>
+            <slot />
+        </main>
+    </section>
+    <section
+        class='h-dvh max-h-dvh overflow-clip bg-slate-700 relative shadow-inner'
+        id='second-section'>
+        <div
+            class="absolute inset-0 bg-[url('/assets/noise.webp')] scale-[1.2] bg-cover bg-multiply bg-center"
+            style='opacity: 0.05; background-size: 30%;'>
+        </div>
+    </section>
+</Head>

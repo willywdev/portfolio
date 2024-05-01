@@ -1,0 +1,48 @@
+---
+import { SEO } from "astro-seo";
+import "@css/font.css";
+
+const { title } = Astro.props;
+const description =
+    "Meet Wilhelm Werwein, a dedicated software developer from Germany specializing in JavaScript and Rust. Explore my portfolio to see how my passion for open source fuels innovative, scalable software solutions and complex problem-solving.";
+---
+
+<html lang='en' class='dark bg-black text-neutral-50 antialiased'>
+    <head>
+        <SEO
+            title={title}
+            description={description}
+            openGraph={{
+                basic: {
+                    title: title,
+                    type: "website",
+                    image: "/assets/logo/logo.webp",
+                },
+            }}
+        />
+        <link
+            rel='apple-touch-icon'
+            sizes='180x180'
+            href='/assets/favicon/apple-touch-icon.png'
+        />
+        <link
+            rel='icon'
+            type='image/png'
+            sizes='32x32'
+            href='/assets/favicon/favicon-32x32.png'
+        />
+        <link
+            rel='icon'
+            type='image/png'
+            sizes='16x16'
+            href='/assets/favicon/favicon-16x16.png'
+        />
+        <link rel='manifest' href='/assets/favicon/site.webmanifest' />
+        <meta name='generator' content={Astro.generator} />
+        <link rel='sitemap' href='/sitemap-index.xml' />
+        <meta charset='utf-8' />
+        <meta name='viewport' content='width=device-width' />
+    </head>
+    <slot />
+    <script src='./flowbite_loader.js'></script>
+</html>
