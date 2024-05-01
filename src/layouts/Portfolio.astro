@@ -1,12 +1,11 @@
 ---
-import Background from "@components/Background";
+import Background from "@/components/Background.astro";
 import Header from "@components/Header.astro";
 import "@css/font.css";
 const { title } = Astro.props;
-import i18next from "i18next";
 ---
 
-<html lang={i18next.language} class='dark bg-black text-neutral-50 antialiased'>
+<html lang='en' class='dark bg-black text-neutral-50 antialiased'>
     <head>
         <meta charset='utf-8' />
         <link
@@ -32,7 +31,7 @@ import i18next from "i18next";
         <title>{title}</title>
     </head>
     <body class='font-sans scroll-smooth font-medium'>
-        <Background client:load />
+        <Background />
         <section class='h-dvh max-h-dvh overflow-clip relative'>
             <Header />
             <main
