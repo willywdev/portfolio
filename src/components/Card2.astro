@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+const { title, image } = Astro.props;
+---
+
+<article
+    class='bg-gradient-to-b from-slate-800 to-slate-900 w-full rounded-xl border border-slate-700 shadow-lg overflow-hidden'>
+    <!-- Tab Bar -->
+    <div class='px-4 py-1 flex justify-evenly items-center text-sm'>
+        <h5>About</h5>
+        <h5>Techstack</h5>
+    </div>
+    <!-- Image Wrapper with 16:9 -->
+    <div class='relative w-full aspect-video'>
+        <Image
+            src={image}
+            alt={title}
+            class='object-cover opacity-50 w-full'
+            id='project-image'
+        />
+    </div>
+    <!-- Content -->
+    <div class='p-4'>
+        <p>
+            <slot />
+        </p>
+    </div>
+</article>
+
+<style>
+    #project-image:hover {
+        opacity: 100%;
+    }
+</style>
